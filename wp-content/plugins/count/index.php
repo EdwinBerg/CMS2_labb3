@@ -8,10 +8,12 @@
 <?php 
 // remove this later ****
 
-$_POST["count_letters"] = null;
 // ********
+$is_seven_letters_long = '';
+if(isset($_POST["count_letters"])) {
+  $is_seven_letters_long = filter_var($_POST["count_letters"], FILTER_SANITIZE_STRING);
 
-$is_seven_letters_long = filter_var($_POST["count_letters"], FILTER_SANITIZE_STRING);
+}
 function counter($is_seven_letters_long) {
   if(strlen($is_seven_letters_long) == 7 ) {
      echo "<p>True</p>";
