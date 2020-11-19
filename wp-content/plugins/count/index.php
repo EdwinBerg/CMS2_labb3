@@ -6,9 +6,6 @@
 ?>
 
 <?php 
-// remove this later ****
-
-// ********
 $is_seven_letters_long = '';
 if(isset($_POST["count_letters"])) {
   $is_seven_letters_long = filter_var($_POST["count_letters"], FILTER_SANITIZE_STRING);
