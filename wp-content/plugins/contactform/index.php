@@ -7,7 +7,6 @@
 class Kontakt_Formular {
 
 public function __construct() {
-    echo 'hej';
     add_action('wp_ajax_send_contact_form', array($this, 'recieve_contact_form'));
     add_action('init', array($this,'messages'));
     add_action('send_contact_form', array($this, 'insertpost_from_contact_form'));
