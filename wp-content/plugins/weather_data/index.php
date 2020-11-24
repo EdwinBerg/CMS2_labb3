@@ -51,10 +51,9 @@ class Weather_Forecast {
         add_action('woocommerce_before_main_content', array($this,'get_weather_forecast'), 20);
       } else if ($this->page === 'checkout' && is_checkout()) {
         add_action('woocommerce_before_checkout_form', array($this,'get_weather_forecast'), 5);
-      } else if ($this->page === 'product' && is_product()) {
-        add_action('woocommerce_before_checkout_form', array($this,'get_weather_forecast'), 5);
+      } else if ($this->page === 'produktsida' && is_product()) {
+        add_action('woocommerce_before_single_product', array($this, 'get_weather_forecast'), 5);
       } 
-      
   }  
 }
 
