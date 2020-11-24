@@ -32,17 +32,6 @@ function recieve_contact_form(){
 
 add_action('wp_ajax_send_contact_form', 'recieve_contact_form');
 
-// function insertpost_from_contact_form() {
-//   wp_insert_post(
-//     [
-//       'post_title' => $_REQUEST['name'], 
-//       'post_content' => $_REQUEST['message'],
-//       'post_type' => 'meddelanden',
-      
-//     ]
-//     );
-// }
-
 
 function messages() {
   register_post_type('meddelanden', [
@@ -61,8 +50,4 @@ add_action('init', 'messages');
 add_action('send_contact_form', 'insertpost_from_contact_form');
 do_action('save_post_{$post->messages}');
 add_action('woocommerce_before_main_content', 'contact_form');
-
-//wp_insertpost returnerar?
-// add_post_meta eller update_post_meta
-
 ?>
