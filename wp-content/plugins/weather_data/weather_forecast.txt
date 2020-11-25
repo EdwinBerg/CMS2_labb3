@@ -1,0 +1,2 @@
+Ett plugin som hämtar väderdata för vald plats som är i detta fall göteborg. Vädret kan visas på specifika sidor som man kan välja i dashboarden.
+och gå in i weather data option och välja plats som vädret ska visas. 
