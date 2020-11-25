@@ -1,0 +1,2 @@
+Detta plugin testar plugin "count plugin" och den skriver då in en sträng på 6, 7 och 9 tecken och ett medföljande antagande.
+Antagandet är vad man tror att strängen kommer att returna, så 7st tecken ska bli true, och 6st ska bli false.
