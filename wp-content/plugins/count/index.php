@@ -9,7 +9,7 @@ class Seven_Letters_Long {
   
   public function __construct(){
     if(isset($_POST["count_letters"])) {
-    $this->is_seven_letters_long = filter_var($_POST["count_letters"], FILTER_SANITIZE_STRING);
+    $this->is_seven_letters_long = sanitize_text_field($_POST["count_letters"]);
 
     echo "<form action=\"\" method=\"post\">
             <label>Skriv in ett ord: </label><br>
@@ -20,13 +20,20 @@ class Seven_Letters_Long {
     }
   }
   public function counter($is_seven_letters_long) {
-    if(strlen($this->is_seven_letters_long) == 7 ) {
-      echo "<p>True</p>";
-    } else echo "<p>False</p>";    
+    if(strlen($is_seven_letters_long) == 7) {
+      return true;
+    } else {
+      return false;
+    } 
   }
-  
+
 }
-if(class_exists('Seven_Letters_Long') {
-  $seven_letters_long = New Seven_Letters_Long
-})
+
+function test() {
+  if(class_exists('Seven_Letters_Long')) {
+    $seven_letters_long = New Seven_Letters_Long();
+  }
+}
+
+add_action('init', 'test');
 ?>
