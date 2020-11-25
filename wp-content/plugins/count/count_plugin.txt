@@ -1,0 +1,4 @@
+Skriv simpelt i text fältet ett ord som sedan kommer räkna antal bokstäver och kolla om det är exakt 7st är det 7st så kommer det
+returna "True" eller "False". 
+
+PS Försök inte att hacka för det har jag fixat så du inte kan, så spar jag lite tid för dig ;)
